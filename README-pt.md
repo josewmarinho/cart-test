@@ -1,5 +1,5 @@
 <p align="center">
-  Project test cart
+  Projeto teste carrinho
 </p>
 
 <div align="center">
@@ -18,11 +18,11 @@
  </p>
 
 
-<p align="center">In this project, we demonstrate the functionalities of an e-commerce platform, including cart handling and manipulation within the project, while addressing some concepts of structuring and componentization. We used 'https://fakestoreapi.com/docs' as the basis.
+<p align="center">Neste projeto, mostramos funcionalidades de um e-commerce, envolvendo carrinho e sua manipulação dentro do projeto, abordando alguns conceitos de estruturação e componentização. Utilizamos 'https://fakestoreapi.com/docs' como base.
 </p>
 
 
-# :camera: Screenshots
+# :camera: Telas
 <div align="center">
    <img src="./.github/home.png" width="400px">
    <img src="./.github/cart.png" width="400px">
@@ -32,8 +32,8 @@
 </div>
 
 
-# :rocket: Technologies
-This project was made using the follow technologies:
+# :rocket: Tecnologias
+Este projeto foi realizado utilizando as seguintes tecnologias:
 
 * [React](https://reactjs.org/)
 * [Next.js](https://nextjs.org/)
@@ -45,26 +45,26 @@ This project was made using the follow technologies:
 * [Radix](https://www.radix-ui.com/)
 * [Axios](https://github.com/axios/axios)
 
-# :computer: How to run
+# :computer: Como rodar
 
 ```bash
-# Clone Repository
+# Clone o Repositório
 $ git clone https://github.com/josewmarinho/cart-test.git && cd ig-news
 
-# Install Dependencies
+# Instale Dependências
 $ npm install
 
-# Fill .env.local file with YOUR environment variables, according to .env.example file.
+# Preencha o arquivo ".env.local" com SUAS variáveis de ambiente, de acordo com arquivo ".env.example".
 
-# Run Aplication
+# Rodando Aplicação
 $ npm run dev
 ```
-Go to http://localhost:3000/ to see the application running.
+Vai para http://localhost:3000/ para ver o aplicativo em execução.
 
 
-# :closed_book: License
+# :closed_book: Licença
 
-Released in 2024 :closed_book: License
+Lançado em 2024 :closed_book: Licencia
 
-Made by [José Wellington](https://github.com/josewmarinho) 🚀.
-This project is under the [MIT license](./LICENSE).
+Feito por [José Wellington](https://github.com/josewmarinho) 🚀.
+Esse projeto esta sobre [MIT license](./LICENSE).
