@@ -1,47 +1,50 @@
-import { getCategorisServices } from '@/modules/product/service/get-categorie.services';
+
+import { useEffect } from 'react';
 import { getProductServices } from '@/modules/product/service/get-product.services';
-import { Header } from '@/shared/components/core/header';
 
 export interface Product {
   id: number,
-  title: string,
-  price: string,
-  category: string,
+  name: string,
+  price: number,
   description: string,
   image: string,
 }
 
 interface HomeProps {
   products: Product[];
-  categories: String[];
 }
 
 export default function Home({
   products,
-  categories,
 }: HomeProps) {
 
-  console.log('products1', products)
-  console.log('categories', categories)
+  useEffect(() => {
+    const handleProducts = async () => {
+      const result = await getProductServices();
+      console.log('Fetched products:', result);
+    };
+
+    const delayTimeout = setTimeout(() => {
+      handleProducts();
+    }, 2000);
+
+    return () => clearTimeout(delayTimeout);
+  }, []);
+
 
   return (
-    <main className="flex h-full flex-col gap-0 overflow-hidden bg-white-50">
-      <Header />
-      <div className="z-50 md:mt-50">
-      </div>
+    <main className="flex h-screen w-full flex-col bg-white-950">
+      
     </main>
   );
 }
 
 export const getServerSideProps = async () => {
   try {
-    const productPaths = await getProductServices();
-    const categoriesPaths = await getCategorisServices();
-
+  
     return {
       props: {
-        products: productPaths ?? [],
-        categories: categoriesPaths ?? [],
+        products: [],
       },
     };
   } catch (e) {
@@ -49,7 +52,6 @@ export const getServerSideProps = async () => {
     return {
       props: {
         products: [],
-        categories: [],
       },
     };
   }
